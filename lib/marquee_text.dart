@@ -106,7 +106,7 @@ class _MarqueeContainerState extends State<_MarqueeContainer>
     }
     final TextPainter textPainter = TextPainter(
         textDirection: TextDirection.ltr,
-        locale: Localizations.localeOf(context, nullOk: true),
+        locale: Localizations.localeOf(context),
         text: TextSpan(text: text, style: style), maxLines: maxLines)
       ..layout(maxWidth: maxWidth);
     return textPainter.size;
