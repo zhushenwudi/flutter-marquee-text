@@ -125,7 +125,6 @@ class _MarqueeContainerState extends State<_MarqueeContainer>
     renderParagraph.layout(widget.constraints);
     var textWidth = boundingTextSize(context, widget.text.toPlainText(), widget.textStyle!, maxLines: 1).width;
     var constraintsWidth = renderParagraph.constraints.maxWidth;
-    print("textWidth: $textWidth - constraintsWidth: $constraintsWidth");
     _showMarquee = (constraintsWidth < textWidth + 1) || widget.alwaysScroll;
     var tweenList = [constraintsWidth, -textWidth];
     if (_showMarquee) {
